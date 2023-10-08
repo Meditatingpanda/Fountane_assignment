@@ -49,7 +49,7 @@ const Login = () => {
           src="/login.jpg"
           alt="Hero Image"
           unoptimized
-          className="object-cover h-full w-full"
+          className="object-cover h-full w-full opacity-90"
           width={100}
           height={100}
         />

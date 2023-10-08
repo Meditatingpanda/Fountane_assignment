@@ -47,7 +47,7 @@ const SignUp = () => {
           src="/login.jpg"
           alt="Hero Image"
           unoptimized
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full opacity-90"
           width={100}
           height={100}
         />

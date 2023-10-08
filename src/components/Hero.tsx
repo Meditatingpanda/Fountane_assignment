@@ -1,38 +1,40 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
 import useAuth from "@/hooks/useAuth";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
-const Hero = () => {
-  const router = useRouter();
-  
+const Hero = async () => {
+  const data = await useAuth();
 
   return (
     <section className="mt-28 px-5 text-center flex items-center justify-center flex-col">
       <div className="max-w-2xl md:max-w-xl lg:max-w-2xl space-y-3">
-        <h1 className="text-4xl md:text-5xl lg:text-5xl text-white font-semibold">
-          Where Even Rotten Tomatoes is Jealous:
-          <br /> Welcome to Movie Paradise
-        </h1>
-        <p className="text-lg text-gray-400 px-16">
-          Discover the best films, TV shows, and more on Movie Paradise which is
-          a Open-Source movie info Platform.
-        </p>
+        <div className=" flex flex-col items-center justify-center">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl text-white font-semibold text-center">
+            May the Force Be with You 🚀
+          </h1>
+          <p className="text-lg text-gray-400 px-8 mt-4 text-center">
+            Dive into the enchanting world of cinema, where every frame tells a
+            story. Welcome to Movie Paradise, your gateway to the magic of
+            movies and TV shows.
+          </p>
+        </div>
 
         <div className="flex items-center justify-center gap-6">
-          <button
-            onClick={() => router.push("/auth/login")}
-            className="text-white inline-flex items-center justify-center px-6 py-1 rounded-full border border-white border-opacity-10 bg-[#64AE9D] hover:bg-[#37bd9e] shadow-sm shadow-[#64AE9D] hover:shadow-2xl"
-          >
-            login
-          </button>
-          <button
-            onClick={() => router.push("/movies")}
-            className="text-white inline-flex items-center justify-center px-6 py-1 rounded-full border border-white border-opacity-25 bg-transparent hover:bg-[#37bd9e] shadow-sm shadow-gray-400"
+          {!data?.session?.user && (
+            <Link
+              href={"/auth/login"}
+              className="mt-8 bg-red-600 hover:bg-red-700 text-white px-6 py-1 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105"
+            >
+              login
+            </Link>
+          )}
+          <Link
+            href={"/movies"}
+            className="mt-8 bg-red-600 hover:bg-red-700 text-white px-6 py-1 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105"
           >
             explore
-          </button>
+          </Link>
         </div>
       </div>
       <LogoCloud />
@@ -51,38 +53,46 @@ function LogoCloud() {
       <div className="flex flex-col items-center my-12 space-y-4 sm:mt-8 sm:space-y-0 md:max-w-2xl sm:grid sm:gap-6 sm:grid-cols-4">
         <div className="flex items-center justify-start">
           <a href="https://nextjs.org" aria-label="Next.js Link">
-            <img
+            <Image
               src="/nextjs.svg"
               alt="Next.js Logo"
               className="h-8 text-white"
+              height={60}
+              width={60}
             />
           </a>
         </div>
         <div className="flex items-center justify-start">
           <a href="https://vercel.com" aria-label="Vercel.com Link">
-            <img
+            <Image
               src="/vercel.svg"
               alt="Vercel.com Logo"
               className="h-6 text-white ml-3"
+              height={60}
+              width={60}
             />
           </a>
         </div>
 
         <div className="flex items-center justify-start">
           <a href="https://supabase.io" aria-label="supabase.io Link">
-            <img
+            <Image
               src="/supabase.svg"
               alt="supabase.io Logo"
               className="h-10 text-white"
+              height={60}
+              width={60}
             />
           </a>
         </div>
         <div className="flex items-center justify-start">
           <a href="https://github.com" aria-label="github.com Link">
-            <img
+            <Image
               src="/github.svg"
               alt="github.com Logo"
               className="h-8 text-white"
+              height={60}
+              width={60}
             />
           </a>
         </div>

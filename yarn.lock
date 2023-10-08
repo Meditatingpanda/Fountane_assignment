@@ -821,6 +821,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"avvvatars-react@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "avvvatars-react@npm:0.4.2"
+  dependencies:
+    goober: ^2.1.8
+  peerDependencies:
+    react: ">= 16"
+    react-dom: ">= 16"
+  checksum: 720deebc94acdd5a9caca31d3097c1a2f8e15057499570a4527362fd2b9f294899f81f17cb890944e98b29282184fc479edfd87480280b50e37cff4ddb156317
+  languageName: node
+  linkType: hard
+
 "axe-core@npm:^4.6.2":
   version: 4.8.2
   resolution: "axe-core@npm:4.8.2"
@@ -1896,6 +1908,7 @@ __metadata:
     "@types/react": ^18
     "@types/react-dom": ^18
     autoprefixer: ^10
+    avvvatars-react: ^0.4.2
     axios: ^1.5.1
     eslint: ^8
     eslint-config-next: 13.5.4
@@ -2145,6 +2158,15 @@ fsevents@~2.3.2:
     merge2: ^1.4.1
     slash: ^3.0.0
   checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
+  languageName: node
+  linkType: hard
+
+"goober@npm:^2.1.8":
+  version: 2.1.13
+  resolution: "goober@npm:2.1.13"
+  peerDependencies:
+    csstype: ^3.0.10
+  checksum: 0c00b90d26d1a2fad432e311fd4f47bc9fef1eee2a733158d9e2c72a89cf76d414090d063a8d20fe378f2b2b8087df0a83b0f00a3244d1466b97a0d3b14344a7
   languageName: node
   linkType: hard
 
