@@ -40,7 +40,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen grid-lines">
       {/* Hero image left side */}
       <div className="hidden md:flex flex-1 overflow-hidden">
         <Image

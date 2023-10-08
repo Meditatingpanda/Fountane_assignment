@@ -15,11 +15,15 @@ const Navbar = async () => {
         <Image src="/logo.png" alt="Logo" width={100} height={100} />
         {/* Middle Links */}
         <div className="hidden md:flex space-x-4">
-          <Link className="text-gray-50 hover:text-gray-100" href="#">
+          <Link className="text-gray-50 hover:text-gray-100" href="/">
             home
           </Link>
 
-          <Link className="text-gray-50 hover:text-gray-100" href="#">
+          <Link
+            className="text-gray-50 hover:text-gray-100"
+            href="https://github.com/Meditatingpanda"
+            target="_blank"
+          >
             github
           </Link>
 

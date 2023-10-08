@@ -17,7 +17,7 @@ const MovieSection = async () => {
   }
 
   return (
-    <div>
+    <div className="grid-lines">
       <Navbar />
       <MoviesWrapper />
     </div>

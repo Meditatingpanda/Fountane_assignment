@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import useAuth from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 const Hero = () => {
   const router = useRouter();
+  
+
   return (
     <section className="mt-28 px-5 text-center flex items-center justify-center flex-col">
       <div className="max-w-2xl md:max-w-xl lg:max-w-2xl space-y-3">
@@ -25,7 +28,7 @@ const Hero = () => {
             login
           </button>
           <button
-            onClick={() => router.push("/auth/signup")}
+            onClick={() => router.push("/movies")}
             className="text-white inline-flex items-center justify-center px-6 py-1 rounded-full border border-white border-opacity-25 bg-transparent hover:bg-[#37bd9e] shadow-sm shadow-gray-400"
           >
             explore
