@@ -34,7 +34,7 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     handleSignIn(data.email, data.password);
-    router.push("/auth/login");
+    router.push("/");
   };
   const handleSignOut = async () => {
     await supabase.auth.signOut();
