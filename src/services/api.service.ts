@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const url = 'https://api.themoviedb.org/3';
 class MoviesService {
+    
      /**
      * Get all posts
      * @returns list of movies
